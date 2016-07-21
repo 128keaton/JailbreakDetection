@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A3F63EB1D4141CE00C25698 /* Cydia.zip in Resources */ = {isa = PBXBuildFile; fileRef = 8A3F63EA1D4141CE00C25698 /* Cydia.zip */; };
 		8A7240721D408C4400D4CA38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7240711D408C4400D4CA38 /* AppDelegate.swift */; };
 		8A7240741D408C4400D4CA38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7240731D408C4400D4CA38 /* ViewController.swift */; };
 		8A7240771D408C4400D4CA38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A7240751D408C4400D4CA38 /* Main.storyboard */; };
 		8A7240791D408C4400D4CA38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A7240781D408C4400D4CA38 /* Assets.xcassets */; };
 		8A72407C1D408C4400D4CA38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A72407A1D408C4400D4CA38 /* LaunchScreen.storyboard */; };
+		8A7240841D408C5700D4CA38 /* DetectJailbreak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7240831D408C5700D4CA38 /* DetectJailbreak.swift */; };
+		DCF83207943E804EC18DDF69 /* Pods_JailbreakDetection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB26F29FA9185BAED625F13E /* Pods_JailbreakDetection.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A3F63EA1D4141CE00C25698 /* Cydia.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = Cydia.zip; path = JailbreakDetection/Cydia.zip; sourceTree = "<group>"; };
 		8A72406E1D408C4400D4CA38 /* JailbreakDetection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JailbreakDetection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A7240711D408C4400D4CA38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A7240731D408C4400D4CA38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,10 @@
 		8A7240781D408C4400D4CA38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A72407B1D408C4400D4CA38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A72407D1D408C4400D4CA38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A7240831D408C5700D4CA38 /* DetectJailbreak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetectJailbreak.swift; sourceTree = "<group>"; };
+		B5497A9F1EFB7A9BEC1EF794 /* Pods-JailbreakDetection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JailbreakDetection.release.xcconfig"; path = "Pods/Target Support Files/Pods-JailbreakDetection/Pods-JailbreakDetection.release.xcconfig"; sourceTree = "<group>"; };
+		CCA5CA9BA35780D83A1E9998 /* Pods-JailbreakDetection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JailbreakDetection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JailbreakDetection/Pods-JailbreakDetection.debug.xcconfig"; sourceTree = "<group>"; };
+		EB26F29FA9185BAED625F13E /* Pods_JailbreakDetection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JailbreakDetection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCF83207943E804EC18DDF69 /* Pods_JailbreakDetection.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08B854FC8B6D585BBDB5BA52 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB26F29FA9185BAED625F13E /* Pods_JailbreakDetection.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		35F028F560D7A2A329366B80 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CCA5CA9BA35780D83A1E9998 /* Pods-JailbreakDetection.debug.xcconfig */,
+				B5497A9F1EFB7A9BEC1EF794 /* Pods-JailbreakDetection.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8A7240651D408C4400D4CA38 = {
 			isa = PBXGroup;
 			children = (
 				8A7240701D408C4400D4CA38 /* JailbreakDetection */,
 				8A72406F1D408C4400D4CA38 /* Products */,
+				8A7779991D41889F00D0B8F4 /* Testing */,
+				35F028F560D7A2A329366B80 /* Pods */,
+				08B854FC8B6D585BBDB5BA52 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +85,21 @@
 			children = (
 				8A7240711D408C4400D4CA38 /* AppDelegate.swift */,
 				8A7240731D408C4400D4CA38 /* ViewController.swift */,
+				8A7240831D408C5700D4CA38 /* DetectJailbreak.swift */,
 				8A7240751D408C4400D4CA38 /* Main.storyboard */,
 				8A7240781D408C4400D4CA38 /* Assets.xcassets */,
 				8A72407A1D408C4400D4CA38 /* LaunchScreen.storyboard */,
 				8A72407D1D408C4400D4CA38 /* Info.plist */,
 			);
 			path = JailbreakDetection;
+			sourceTree = "<group>";
+		};
+		8A7779991D41889F00D0B8F4 /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+				8A3F63EA1D4141CE00C25698 /* Cydia.zip */,
+			);
+			name = Testing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +109,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A7240801D408C4400D4CA38 /* Build configuration list for PBXNativeTarget "JailbreakDetection" */;
 			buildPhases = (
+				4BC42E040187C435C2767576 /* [CP] Check Pods Manifest.lock */,
 				8A72406A1D408C4400D4CA38 /* Sources */,
 				8A72406B1D408C4400D4CA38 /* Frameworks */,
 				8A72406C1D408C4400D4CA38 /* Resources */,
+				D55CE5A9E297C242D0E7B1E8 /* [CP] Embed Pods Frameworks */,
+				4FDE03496877205AD720B0F0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,6 +166,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A3F63EB1D4141CE00C25698 /* Cydia.zip in Resources */,
 				8A72407C1D408C4400D4CA38 /* LaunchScreen.storyboard in Resources */,
 				8A7240791D408C4400D4CA38 /* Assets.xcassets in Resources */,
 				8A7240771D408C4400D4CA38 /* Main.storyboard in Resources */,
@@ -133,6 +175,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4BC42E040187C435C2767576 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4FDE03496877205AD720B0F0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JailbreakDetection/Pods-JailbreakDetection-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D55CE5A9E297C242D0E7B1E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JailbreakDetection/Pods-JailbreakDetection-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8A72406A1D408C4400D4CA38 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +230,7 @@
 			files = (
 				8A7240741D408C4400D4CA38 /* ViewController.swift in Sources */,
 				8A7240721D408C4400D4CA38 /* AppDelegate.swift in Sources */,
+				8A7240841D408C5700D4CA38 /* DetectJailbreak.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,9 +345,11 @@
 		};
 		8A7240811D408C4400D4CA38 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCA5CA9BA35780D83A1E9998 /* Pods-JailbreakDetection.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JailbreakDetection/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bittank.JailbreakDetection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -266,9 +359,11 @@
 		};
 		8A7240821D408C4400D4CA38 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5497A9F1EFB7A9BEC1EF794 /* Pods-JailbreakDetection.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JailbreakDetection/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bittank.JailbreakDetection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -295,6 +390,7 @@
 				8A7240821D408C4400D4CA38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
