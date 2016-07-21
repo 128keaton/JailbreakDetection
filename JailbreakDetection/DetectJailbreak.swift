@@ -56,28 +56,6 @@ class Detector: NSObject{
         return false
         
     }
-       func copyFromBundle(name: String, fileExtension: String) -> (Bool){
-        //Call with appname + extension
-        let documentsDir = FileManager.default().urlsForDirectory(.documentDirectory, inDomains: .userDomainMask).first!.path
-        
-        let bundleDir = Bundle.main().pathForResource(name, ofType: fileExtension)
-        if FileManager.default().fileExists(atPath: bundleDir!) && FileManager.default().fileExists(atPath: documentsDir! + "/" + name + "." + fileExtension) == false{
-       print("ZIP found")
-     
-        do{
-            try FileManager.default().copyItem(atPath: bundleDir!, toPath: documentsDir! + "/" + name + "." + fileExtension)
-        
-        }catch let error as NSError{
-            print("Error copyying " +  bundleDir! + ". Description: " + error.localizedDescription)
-            return false
-        }
-            
-        }else{
-          print("either file there or not")
-            return true
-        }
-        return true
-    }
  
     func allTests(){
         var failedTests = [String]()
