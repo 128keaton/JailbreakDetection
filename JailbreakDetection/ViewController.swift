@@ -20,25 +20,7 @@ class ViewController: UIViewController, DetectorDelegate {
         detector.delegate = self
         detector.allTests()
     }
-    @IBAction func beta(){
-        let detector = Detector()
-        detector.delegate = self
-        if detector.installCydia(){
-            let alertController = UIAlertController.init(title: "Installed", message: "Cydia has been installed", preferredStyle: .alert)
-            let action = UIAlertAction.init(title: "Ok", style: UIAlertActionStyle.default, handler: { (void) in alertController.dismiss(animated: true, completion: nil)})
-            
-            alertController.addAction(action)
-            self.present(alertController, animated: true, completion: nil)
 
-        }else{
-            let alertController = UIAlertController.init(title: "Not Installed", message: "Cydia has not been installed", preferredStyle: .alert)
-            let action = UIAlertAction.init(title: "Ok", style: UIAlertActionStyle.default, handler: { (void) in alertController.dismiss(animated: true, completion: nil)})
-            
-            alertController.addAction(action)
-            self.present(alertController, animated: true, completion: nil)
-        
-        }
-    }
     func notifyJailbroken(isJailbroken: Bool, testsFailed: [String]) {
         switch isJailbroken {
         case true:
